@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Crystals Collector Game</title>
+
+        <!-- Added link to the jQuery Library -->
+       <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+        <!-- Added a link to Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Risque" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- Jumbotron for Title -->
+        <div class="jumbotron main-header">
+            <h1 class="text-center">Crystals Collector Game</h1>
+            <!-- <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3> -->
+        </div>
+
+        <div class="container">  <!-- body container -->
+
+            <div class="row">   <!-- Istruction row starts -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title section-header">Game instruction</h3>
+                        </div>
+                        <div class="panel-body">  
+                            <ul>
+                                <li>You will be given a random at the start of the game.</li>
+                                <li>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your score.</li>
+                                <li>You win the game by matching your total score to the random number. You loss the game if your total score goes above the random number.</li>
+                                <li>The value of each crystal is hidden from you until you click on it.</li>
+                                <li>Each time when the game starts, the game will change the value of each crystal.</li>
+                            </ul>            
+                        </div>
+                    </div>
+                </div>
+            </div>    <!-- Istruction row ends -->
+
+            <div class="row"> <!-- second row starts -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title section-header">Target Number</h3>
+                        </div>
+                        <div class="panel-body"> 
+                            <h1 id="target-number"></h1>             
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title section-header">Your Total Score</h3>
+                        </div>
+                        <div class="panel-body">  
+                            <h1 id="you-score">0</h1>            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title section-header">Result</h3>
+                        </div>
+                        <div class="panel-body">   
+                            <p id="wins">Wins: </p>
+                            <p id="losses">Losses: </p>           
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- second row ends -->
+            <div class="row"> <!-- images row starts -->
+                <div class="col-lg-12" id="crystals">
+                    <img class="crystal-image" src="assets/images/blue.png" alt="blue-crystal" id="crystal-1">
+                    <img class="crystal-image" src="assets/images/orange.png" alt="blue-crystal" id="crystal-2">
+                    <img class="crystal-image" src="assets/images/purple.png" alt="blue-crystal" id="crystal-3">
+                    <img class="crystal-image" src="assets/images/pink.png" alt="blue-crystal" id="crystal-4">
+                </div>
+            </div> <!-- images row ends -->
+        </div>   <!-- body container ends -->
+
+        <footer class="container-fluid">
+            <div class="container text-center">
+                Copyright &copy; 2018 Elshibani Omar
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+    </body>
+</html>
