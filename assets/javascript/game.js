@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
 	// VARIABLES
 	// ==========================================================================
@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var total = 0;
 	var randomnumber = 0;
 	var randomNumberArr = [];
-	
+
 
 
 	// FUNCTIONS
@@ -23,18 +23,18 @@ $(document).ready(function(){
 
 	// Udate the crystals random number values
 	function updateCrystalsValues() {
-		var firstCrystal = $("#crystal-1").attr("data-crystalvalue", randomNumberArr[0]);
-		var secondCrystal = $("#crystal-2").attr("data-crystalvalue", randomNumberArr[1]);
-		var thirdCrystal = $("#crystal-3").attr("data-crystalvalue", randomNumberArr[2]);
-		var fourthCrystal = $("#crystal-4").attr("data-crystalvalue", randomNumberArr[3]);
+		$("#crystal-1").attr("data-crystalvalue", randomNumberArr[0]);
+		$("#crystal-2").attr("data-crystalvalue", randomNumberArr[1]);
+		$("#crystal-3").attr("data-crystalvalue", randomNumberArr[2]);
+		$("#crystal-4").attr("data-crystalvalue", randomNumberArr[3]);
 	}
 
 
 	// Update the target number function
-	function updateTargetNumber(){
-        randomnumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
-        $("#target-number").html(randomnumber);
-        return randomnumber;
+	function updateTargetNumber() {
+		randomnumber = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+		$("#target-number").html(randomnumber);
+		return randomnumber;
 	}
 
 
@@ -68,33 +68,33 @@ $(document).ready(function(){
 
 	// Add on click listener to the reystal images
 
-	$(".crystal-image").on("click", function() {
+	$(".crystal-image").on("click", function () {
 
 		var crystalValue = ($(this).attr("data-crystalvalue"));
-    	crystalValue = parseInt(crystalValue);
-    	// console.log(crystalValue);
-    	total += crystalValue;
-    	// console.log("Total: " + total);
-    	$("#you-score").html(total);
-    	// console.log(randomnumber);
+		crystalValue = parseInt(crystalValue);
+		// console.log(crystalValue);
+		total += crystalValue;
+		// console.log("Total: " + total);
+		$("#you-score").html(total);
+		// console.log(randomnumber);
 
-    	if (total === randomnumber) {
-    		setTimeout(function(){
-    			alert("You win!");
-    		}, 100)
-	      
-	      wins++;
-	      $("#wins").html("Wins: " + wins);
-	      reset();
-	    } 
-	    else if (total >= randomnumber) {
-	    	setTimeout(function() {
-	    		alert("You lose!!");
-	    	}, 100)
-	      
-	      losses++;
-	      $("#losses").html("Losses: " + losses);
-	      reset();
-	    }
+		if (total === randomnumber) {
+			setTimeout(function () {
+				alert("You win!");
+			}, 100)
+
+			wins++;
+			$("#wins").html("Wins: " + wins);
+			reset();
+		}
+		else if (total >= randomnumber) {
+			setTimeout(function () {
+				alert("You lose!!");
+			}, 100)
+
+			losses++;
+			$("#losses").html("Losses: " + losses);
+			reset();
+		}
 	});
 });
